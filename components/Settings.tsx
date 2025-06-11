@@ -17,7 +17,7 @@ export default function Settings() {
 
   const fetchSettings = async () => {
     try {
-      const res = await fetch('https://jokiku.codepena.cloud/api/settings');
+      const res = await fetch('https://linkweb/api/settings');
       const data = await res.json();
       setSettings(data);
     } catch (error) {

@@ -36,7 +36,7 @@ export default function Pos() {
 
   const fetchBarangs = async () => {
     try {
-      const res = await fetch('https://jokiku.codepena.cloud/api/barang');
+      const res = await fetch('https://linkweb/api/barang');
       const data = await res.json();
       setBarangs(data);
     } catch (e) {

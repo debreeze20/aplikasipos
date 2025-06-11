@@ -30,7 +30,7 @@ export default function Laporan() {
   const fetchDetail = async (jenis: string) => {
     setLoadingDetail(true);
     try {
-      const res = await fetch('https://jokiku.codepena.cloud/api/laporanpenjualan');
+      const res = await fetch('https://linkweb/api/laporanpenjualan');
       const data = await res.json();
       const filtered = data.filter((d: Laporan) => {
         if (jenis === 'Pengeluaran') return d.total < 0;
