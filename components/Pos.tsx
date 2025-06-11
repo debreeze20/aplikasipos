@@ -1,5 +1,5 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   Alert,
   FlatList,
@@ -75,7 +75,7 @@ export default function Pos() {
     }
 
     try {
-      const response = await fetch('https://jokiku.codepena.cloud/api/createpos', {
+      const response = await fetch('https://linkweb/api/createpos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -18,7 +18,7 @@ export default function LoginScreens() {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('https://jokiku.codepena.cloud/api/login', {
+      const response = await fetch('https://linkweb/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

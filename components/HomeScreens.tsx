@@ -2,15 +2,14 @@ import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useNavigation } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
-import React from 'react';
 import {
-  Dimensions,
-  Image,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+    Dimensions,
+    Image,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from 'react-native';
 
 const features = [
@@ -28,7 +27,7 @@ const HomeScreens = () => {
   const handleFeaturePress = async (screen?: string, label?: string) => {
     if (label === 'Logout') {
       try {
-        await fetch('https://jokiku.codepena.cloud/api/logout', {
+        await fetch('https://linkweb/api/logout', {
           method: 'POST',
           credentials: 'include',
         });

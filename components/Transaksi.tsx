@@ -1,13 +1,13 @@
 import { Ionicons } from '@expo/vector-icons';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
-  ActivityIndicator,
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
+    ActivityIndicator,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from 'react-native';
 
 type PenjualanItem = {
@@ -53,7 +53,7 @@ const Transaksi = () => {
   const fetchPenjualan = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('https://jokiku.codepena.cloud/api/transaksi');
+      const response = await axios.get('https://linkweb/api/transaksi');
       const data = response.data as Penjualan[];
 
       const formatted = data.map((item) => ({

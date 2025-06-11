@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   ActivityIndicator,
   Alert,
@@ -88,7 +88,7 @@ export default function KelolaProduk() {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      const response = await fetch('https://jokiku.codepena.cloud/api/barang', {
+      const response = await fetch('https://linkweb/api/barang', {
         headers: {
           'Content-Type': 'application/json',
           'User-Agent': 'Mozilla/5.0'
@@ -112,7 +112,7 @@ export default function KelolaProduk() {
 
   const fetchKategoris = async () => {
     try {
-      const response = await fetch('https://jokiku.codepena.cloud/api/kategori');
+      const response = await fetch('https://linkweb/api/kategori');
       const data = await response.json();
       setKategoris(data);
     } catch (err) {
@@ -122,7 +122,7 @@ export default function KelolaProduk() {
 
   const fetchSatuans = async () => {
     try {
-      const response = await fetch('https://jokiku.codepena.cloud/api/satuan');
+      const response = await fetch('https://linkweb/api/satuan');
       const data = await response.json();
       setSatuans(data);
     } catch (err) {
@@ -163,8 +163,8 @@ export default function KelolaProduk() {
     try {
       const method = editingId ? 'PUT' : 'POST';
       const url = editingId
-        ? `https://jokiku.codepena.cloud/api/barang/${editingId}`
-        : 'https://jokiku.codepena.cloud/api/barang';
+        ? `https://linkweb/api/barang/${editingId}`
+        : 'https://linkweb/api/barang';
 
       const productData = {
         ...product,
@@ -241,7 +241,7 @@ export default function KelolaProduk() {
           text: 'Hapus',
           onPress: async () => {
             try {
-              const response = await fetch(`https://jokiku.codepena.cloud/api/barang/${id}`, {
+              const response = await fetch(`https://linkweb/api/barang/${id}`, {
                 method: 'DELETE'
               });
 
